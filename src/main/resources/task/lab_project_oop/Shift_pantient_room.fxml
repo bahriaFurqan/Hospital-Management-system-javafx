@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="653.0" prefWidth="869.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="task.lab_project_oop.Shift_patientroomController">
+    <children>
+        <AnchorPane layoutY="3.0" prefHeight="649.0" prefWidth="218.0" style="-fx-background-color: #227f9a;">
+            <children>
+                <Button fx:id="backbtn" layoutX="78.0" layoutY="546.0" mnemonicParsing="false" onAction="#back_handler" prefHeight="26.0" prefWidth="70.0" style="-fx-background-radius: 10;" text="Back" />
+
+                <Line endX="100.0" layoutX="111.0" layoutY="212.0" startX="-100.0" />
+                <Label layoutX="15.0" layoutY="179.0" text="Functionality" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Button fx:id="Add_btn" layoutX="74.0" layoutY="311.0" mnemonicParsing="false" onAction="#Add_handler" prefHeight="26.0" prefWidth="69.0" style="-fx-background-radius: 10;" text="Add" />
+                <Button fx:id="Removebtn" layoutX="74.0" layoutY="395.0" mnemonicParsing="false" onAction="#Remove_handler" prefHeight="26.0" prefWidth="69.0" style="-fx-background-radius: 10;" text="Remove" />
+                <Button fx:id="Editbtn" layoutX="76.0" layoutY="467.0" mnemonicParsing="false" onAction="#Edit_handler" prefHeight="26.0" prefWidth="69.0" style="-fx-background-radius: 10;" text="Edit" />
+            <Text layoutX="42.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shift Patient">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            </children>
+        </AnchorPane>
+        <TableView fx:id="shiftpatienttable" layoutX="218.0" layoutY="3.0" prefHeight="342.0" prefWidth="811.0">
+            <columns>
+                <TableColumn fx:id="appointmentNoColumn" prefWidth="126.40000915527344" text="Appointment No." />
+                <TableColumn fx:id="doctorColumn" minWidth="1.60003662109375" prefWidth="126.4000244140625" text="Doctor" />
+                <TableColumn fx:id="patientColumn" minWidth="1.60003662109375" prefWidth="132.80001831054688" text="Patient" />
+                <TableColumn fx:id="dayColumn" minWidth="1.60003662109375" prefWidth="139.99993896484375" text="Date" />
+                <TableColumn fx:id="timeColumn" minWidth="1.60003662109375" prefWidth="148.00006103515625" text="Time" />
+            <TableColumn fx:id="roomColumn" minWidth="1.60003662109375" prefWidth="140.800048828125" text="Room" />
+
+            </columns>
+        </TableView>
+        <ComboBox fx:id="Doctor_Combobox" layoutX="525.0" layoutY="359.0" prefWidth="150.0" promptText="Doctor" />
+        <ComboBox fx:id="Patient_Combobox" layoutX="525.0" layoutY="474.0" prefWidth="150.0" promptText="Patient" />
+        <DatePicker fx:id="date_picker" layoutX="524.0" layoutY="415.0" prefHeight="26.0" prefWidth="150.0" />
+        <TextField fx:id="Time_textfield" layoutX="525.0" layoutY="593.0" promptText="Time" />
+      <ComboBox fx:id="Room_Combobox" layoutX="524.0" layoutY="537.0" prefWidth="150.0" promptText="Room" />
+      <Text layoutX="398.0" layoutY="379.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Doctor :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="417.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Date :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="397.0" layoutY="494.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Patient :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="401.0" layoutY="557.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Room :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="419.0" layoutY="613.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Time :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+    </children>
+</AnchorPane>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="653.0" prefWidth="1036.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="task.lab_project_oop.Admin_Appointment_Controller">
+    <children>
+        <AnchorPane layoutY="3.0" prefHeight="649.0" prefWidth="218.0" style="-fx-background-color: #227f9a;">
+            <children>
+                <Button fx:id="Appointment_button" layoutX="39.0" layoutY="250.0" mnemonicParsing="false" onAction="#Appointment_buttonhandler" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 10;" text="Appointment Requests" />
+                <Button fx:id="backbtn" layoutX="24.0" layoutY="560.0" mnemonicParsing="false" onAction="#back_handler" prefHeight="26.0" prefWidth="70.0" style="-fx-background-radius: 10;" text="Back" />
+               
+                <Line endX="100.0" layoutX="111.0" layoutY="212.0" startX="-100.0" />
+                <Label layoutX="15.0" layoutY="179.0" text="Functionality" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+            <Button fx:id="Add_btn" layoutX="21.0" layoutY="479.0" mnemonicParsing="false" onAction="#Add_handler" prefHeight="26.0" prefWidth="77.0" style="-fx-background-radius: 10;" text="Add" />
+            <Button fx:id="Removebtn" layoutX="119.0" layoutY="479.0" mnemonicParsing="false" onAction="#Remove_handler" prefHeight="26.0" prefWidth="69.0" style="-fx-background-radius: 10;" text="Remove" />
+            <Button fx:id="Editbtn" layoutX="119.0" layoutY="560.0" mnemonicParsing="false" onAction="#Edit_handler" prefHeight="26.0" prefWidth="69.0" style="-fx-background-radius: 10;" text="Edit" />
+            <Text layoutX="51.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            </children>
+        </AnchorPane>
+        <TableView fx:id="tableViewAppointments" layoutX="218.0" layoutY="3.0" prefHeight="342.0" prefWidth="811.0">
+            <columns>
+                <TableColumn fx:id="appointmentNoColumn" prefWidth="152.80003356933594" text="Appointment No." />
+                <TableColumn fx:id="doctorColumn" minWidth="1.60003662109375" prefWidth="158.39996337890625" text="Doctor" />
+                <TableColumn fx:id="patientColumn" minWidth="1.60003662109375" prefWidth="160.79998779296875" text="Patient" />
+                <TableColumn fx:id="dayColumn" minWidth="1.60003662109375" prefWidth="176.800048828125" text="Date" />
+                <TableColumn fx:id="timeColumn" minWidth="1.60003662109375" prefWidth="159.2000732421875" text="Time" />
+
+            </columns>
+        </TableView>
+      <ComboBox fx:id="Doctor_Combobox" layoutX="548.0" layoutY="372.0" prefWidth="150.0" promptText="Doctor" />
+      <ComboBox fx:id="Patient_Combobox" layoutX="548.0" layoutY="449.0" prefWidth="150.0" promptText="Patient" />
+      <DatePicker fx:id="date_picker" layoutX="548.0" layoutY="514.0" prefHeight="26.0" prefWidth="150.0" />
+      <TextField fx:id="Time_textfield" layoutX="549.0" layoutY="580.0" promptText="Time" />
+      <Text layoutX="407.0" layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Doctor :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="406.0" layoutY="469.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Patient :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="423.0" layoutY="534.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Date :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="428.0" layoutY="600.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Time :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+    </children>
+</AnchorPane>

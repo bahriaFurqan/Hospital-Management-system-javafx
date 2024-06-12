@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="653.0" prefWidth="869.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="task.lab_project_oop.Request_AppointmentController">
+    <children>
+        <AnchorPane layoutY="3.0" prefHeight="649.0" prefWidth="218.0" style="-fx-background-color: #227f9a;">
+            <children>
+                <Button fx:id="backbtn" layoutX="73.0" layoutY="521.0" mnemonicParsing="false" onAction="#back_handler" prefHeight="26.0" prefWidth="70.0" style="-fx-background-radius: 10;" text="Back" />
+
+                <Line endX="100.0" layoutX="111.0" layoutY="212.0" startX="-100.0" />
+                <Label layoutX="15.0" layoutY="179.0" text="Functionality" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Button fx:id="Addbtn" layoutX="74.0" layoutY="298.0" mnemonicParsing="false" onAction="#Add_handler" prefHeight="26.0" prefWidth="69.0" style="-fx-background-radius: 10;" text="Add" />
+                <Button fx:id="Removebtn" layoutX="74.0" layoutY="377.0" mnemonicParsing="false" onAction="#Remove_handler" prefHeight="26.0" prefWidth="69.0" style="-fx-background-radius: 10;" text="Remove" />
+                <Button fx:id="Editbtn" layoutX="74.0" layoutY="448.0" mnemonicParsing="false" onAction="#Edit_handler" prefHeight="26.0" prefWidth="69.0" style="-fx-background-radius: 10;" text="Edit" />
+            <Text layoutX="12.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Request Appointment">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            </children>
+        </AnchorPane>
+        <TableView fx:id="tableViewAppointments" layoutX="218.0" layoutY="3.0" prefHeight="342.0" prefWidth="663.0">
+            <columns>
+                <TableColumn fx:id="doctorColumn" minWidth="1.60003662109375" prefWidth="146.40000915527344" text="Doctor" />
+                <TableColumn fx:id="patientColumn" minWidth="1.60003662109375" prefWidth="150.39996337890625" text="Patient" />
+                <TableColumn fx:id="dayColumn" minWidth="1.60003662109375" prefWidth="167.20001220703125" text="Date" />
+                <TableColumn fx:id="timeColumn" minWidth="1.60003662109375" prefWidth="199.99993896484375" text="Time" />
+
+            </columns>
+        </TableView>
+        <ComboBox fx:id="Doctor_Combobox" layoutX="474.0" layoutY="373.0" prefWidth="150.0" promptText="Doctor" />
+        <DatePicker fx:id="date_picker" layoutX="474.0" layoutY="432.0" prefHeight="26.0" prefWidth="150.0" />
+        <TextField fx:id="Time_textfield" layoutX="474.0" layoutY="492.0" prefHeight="26.0" prefWidth="150.0" promptText="Time" />
+      <Text layoutX="369.0" layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select :" wrappingWidth="70.39999999999998">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="326.0" layoutY="452.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Date :" wrappingWidth="114.21784973144531">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="336.0" layoutY="512.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Time :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+    </children>
+</AnchorPane>
